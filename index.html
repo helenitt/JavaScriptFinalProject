@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Star Insurance</title>
+    <meta charset='utf-8'>
+    <meta name='description' content='Star Insurance, Tralee, Kerry, Ireland, 00 353 66 7112345'>
+    <meta name='keywords' content='Insurance, home, house, contents, cover, security, policy'><!-- tailored for this specific page of website-->
+    <meta name='author' content="Helen O'Brien T00183586">
+    <meta name='robots' content='all'>
+    <meta name='viewport' content='width=device-width'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link rel='stylesheet' href='star.css' type='text/css' />
+    <link href="favicon.ico" rel="icon"/> 
+    <link href="favicon.ico" rel="shortcut icon"/>
+
+<script type="text/javascript" src="star.js">
+    
+</script>
+  </head>
+  <body onload="var changeImages=setInterval('homes()',2000);">
+
+    <div id="header">
+      <img src="images/star1.png"  alt="Star Insurance Logo" title="Star Insurance Logo" width="146" height="150" />
+      <h1>STAR &nbsp;INSURANCE</h1>
+    </div>
+    
+    <div class="call">
+      <h2>LOWCALL 1890 20 20 20</h2>
+    </div>
+    
+    <div id="nav">
+      <ul>
+        <li><a href="">Star</a></li>
+        <li><a href="">Business</a></li>
+        <li><a href="">Health</a></li>
+        <li><a href="" class="active">Home</a></li>
+        <li><a href="">Motor</a></li>
+      </ul>
+    </div>
+    
+    <div id="sidebar" class="hide-mobile">
+      <h3>Home Insurance</h3>
+      
+      <img src="images/kilkenny.jpg" alt="Irish Castles and Cottages" title="Irish Castles and Cotteges" />
+      <!-- kilkenny.jpg free-desktop-backgrounds.net -->
+      
+      <br><br><br>
+     
+      <h4>Head Office</h4>
+      <p>St Stephens Green, Dublin<br>Tel 01 678 9900<br>
+      <a href="mailto:star.dublin@gmail.com">star.dublin@gmail.com</a>
+      </p>
+      <br>
+      <h4>Regional Offices</h4>
+      <p>North Main Street, Naas, Kildare<br>Tel 01 249 9900<br>
+      <a href="mailto:star.naas@gmail.com">star.naas@gmail.com</a>
+      </p>
+      <p>Eyre Square, Galway<br>Tel 091 678 9900<br>
+      <a href="mailto:star.galway@gmail.com">star.galway@gmail.com</a>
+      </p>
+      <p>Station Road, Ennis<br>Tel 091 678 9900<br>
+      <a href="mailto:star.ennis@gmail.com">star.ennis@gmail.com</a>
+      </p>      
+      <p>Oliver Plunnkett Street, Cork<br>Tel 021 678 9900<br>
+      <a href="mailto:star.cork@gmail.com">star.cork@gmail.com</a>
+      </p>
+      <p>Market Square, Mallow, Cork<br>Tel 022 53888<br>
+      <a href="mailto:star.mallow@gmail.com">star.mallow@gmail.com</a>
+      </p>
+      <p>The Square, Tralee, Kerry<br>Tel 066 7152654<br>
+      <a href="mailto:star.tralee@gmail.com">star.tralee@gmail.com</a>
+      </p>
+      <p>High Street, Killarney, Kerry<br>Tel 064 6622654<br>
+      <a href="mailto:star.killarney@gmail.com">star.killarney@gmail.com</a>
+      </p>
+    </div>
+    
+    <div id="content">
+      <h3>Estimated Quote</h3>
+      <p>To get an idea of much your premium will be please answer the following 
+      questions.</p>
+      
+      <form name="quote" method="post" action="mailto:helen.obrien2@ittralee.ie?subject=estimate" enctype="text/plain">
+        <fieldset>
+          <legend class="leghead" id="a">PROPERTY</legend>
+          
+            <label class="lab" onmouseover="helpQ1()" onmouseout="hideQ1()">Do you own or rent the property?</label>
+            <div id="q1" class="hide">
+              <p>Do you own & live in the house, own it<br>as a holiday home or rent this house</p>
+            </div>
+            <br>
+            
+            <input type="radio" name="own" onclick="recordValues(1, 50)" value="50" />
+            <label class="lab">I own this house, it is my main residence.</label><br>
+            
+            <input type="radio" name="own" onclick="recordValues(1, 25)" value="25" />
+            <label class="lab">I own this house, it is used as a holiday home.</label><br>
+            
+            <input type="radio" name="own" onclick="recordValues(1, 5)" value="5" />
+            <label class="lab">I rent this house.</label><br><br>
+            
+            <select id="houselocation" onchange="getLocation()">
+              <option disabled="" selected="">Location</option>
+              <option value="50">Dublin</option>
+              <option value="30">Cork, Limerick, Kerry</option>
+              <option value="10">West of Ireland</option>
+            </select>&nbsp;&nbsp;
+            <label class="lab" for="houselocation" onmouseover="helpQ2()" onmouseout="hideQ2()">
+            Please select the location of the property?</label>
+            <div id="q2" class="hide">
+              <p>Please select the area in which your house is located</p>
+            </div>
+            
+            <br><br>
+            
+            <select id="housetype" onchange="getType()">
+              <option disabled="" selected="">House Type</option>
+              <option value="65">Bungalow</option>
+              <option value="100">Detatched</option>
+              <option value="50">Semi-Detatched</option>
+              <option value="40">Terraced</option>
+              <option value="10">Apartment</option>
+            </select>&nbsp;&nbsp;
+            <label class="lab" for="housetype" onmouseover="helpQ3()" onmouseout="hideQ3()">
+            Please select the type of property?</label>
+            <!-- the label usually goes before the listbox but for formatting and layout I have put it after in this instance-->
+            <div id="q3" class="hide">
+              <p>Please select the type of house you wish to insure</p>
+            </div>
+            
+            <br><br>
+            
+            <select id="houseage" onchange="getAge()">
+              <option disabled="" selected="">Age of House</option>              
+              <option value="50">Less than 1 Year</option>
+              <option value="75">Between 1 & 5 Years</option>
+              <option value="90">Between 5 & 15 Years</option>
+              <option value="100">Older than 15 Years</option>
+            </select>&nbsp;&nbsp;
+            <label class="lab" for="houseage" onmouseover="helpQ4()" onmouseout="hideQ4()">
+            Please select the age of the property?</label>
+            <!-- the label usually goes before the listbox but for formatting and layout I have put it after in this instance-->
+            <div id="q4" class="hide">
+              <p>Please select the age catergory of your house</p>
+            </div>
+            
+        </fieldset>
+        
+        <fieldset>
+          <legend class="leghead">PROTECTION</legend>
+          
+            <label class="lab" onmouseover="helpQ5()" onmouseout="hideQ5()">
+            Does your home have a fully functioning alarm system?</label><br>
+            <div id="q5" class="hide2">
+              <p>Please indicate if your house has a fully functioning alarm installed and its type</p>
+            </div>
+            
+            <input type="radio" name="alarm" onclick="recordValues(5, 10)" value="10" />
+            <label class="lab">Yes - Monitored Alarm</label>&nbsp;&nbsp;
+            
+            <input type="radio" name="alarm" onclick="recordValues(5, 40)" value="40" />
+            <label class="lab">Yes - Standard Alarm</label>&nbsp;&nbsp;
+            
+            <input type="radio" name="alarm" onclick="recordValues(5, 100)" value="100" />
+            <label class="lab">No Alarm</label><br><br>
+            
+            <label class="lab" onmouseover="helpQ6()" onmouseout="hideQ6()">
+            Does your home have at least two working Smoke Detectors?</label><br>
+            <div id="q6" class="hide2">
+              <p>Please indicate if your home has at least two working Smoke Detectors</p>
+            </div>
+            
+            <input type="radio" name="smoke" onclick="recordValues(6, 10)" value="10" />
+            <label class="lab">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <input type="radio" name="smoke" onclick="recordValues(6, 50)" value="50" />
+            <label class="lab">No</label><br>
+            
+        </fieldset>
+        
+        <fieldset>
+          <legend class="leghead">COVER</legend>
+          
+            <label class="lab">Please indicate your choice of the following:-</label><br><br>
+            
+            <label class="lab" onmouseover="helpQ7()" onmouseout="hideQ7()">
+            Buildings Cover &nbsp;&nbsp;€</label>
+            <div id="q7" class="hide3">
+              <p>Please enter the amount of buildings cover you would like</p>
+            </div>
+            <input type="text" id="b" name="buildingcover" onblur="return getBuildingCover()" 
+            placeholder="Amount" size="10" /><br><br>
+                                
+            <select id="contentscover" onchange="getContents()">
+              <option disabled="" selected="">Amount</option>              
+              <option value="50">20,000</option>
+              <option value="70">40,000</option>
+              <option value="90">60,000</option>
+              <option value="110">80,000</option>
+              <option value="150">Over 80,000</option>
+            </select>&nbsp;&nbsp;
+            <label class="lab" for="contentscover" onmouseover="helpQ8()" onmouseout="hideQ8()">
+            Contents Cover</label>
+            <!-- the label usually goes before the listbox but for formatting and layout I have put it after in this instance-->            
+            <div id="q8" class="hide3">
+              <p>Please select a catergory for the amount of contents cover</p>
+            </div>
+            <br><br>
+
+            
+            <select id="claimfree" onchange="getClaimFree()">
+              <option disabled="" selected="">Period</option>              
+              <option value="100">1 Year</option>
+              <option value="80">2 Years</option>
+              <option value="60">3 Years</option>
+              <option value="40">4 Years</option>
+              <option value="20">Over 5 Years</option>
+            </select>&nbsp;&nbsp;
+            <label class="lab" for="claimfree" onmouseover="helpQ9()" onmouseout="hideQ9()">
+            Period of time Claim Free</label>
+            <!-- the label usually goes before the listbox but for formatting and layout I have put it after in this instance-->
+            <div id="q9" class="hide3">
+              <p>Please indicate the length of time you have been claims free</p>
+            </div>
+            <br><br>
+            
+            <label class="lab" onmouseover="helpQ10()" onmouseout="hideQ10()">Claim Excess</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div id="q10" class="hide3">
+              <p>Please indicate the amount of claims excess you would like</p>
+            </div>
+            
+            <input type="radio" name="excess" onclick="recordValues(10, 30)" value="30" />
+            <label class="lab">€250</label>&nbsp;&nbsp;
+            
+            <input type="radio" name="excess" onclick="recordValues(10, 50)" value="50" />
+            <label class="lab">€500</label>&nbsp;&nbsp;
+            
+            <input type="radio" name="excess" onclick="recordValues(10, 70)" value="70" />
+            <label class="lab">€1,000</label><br><br>
+            
+        </fieldset>
+        
+        <fieldset class="pad">
+        
+          <div class="mid">    
+            <input type="button" name="calc" onclick="calcPremium()" value="Calculate" class="butt" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+            <input type="reset" name="resetp"  class="butt" />
+          </div>
+          
+          <h4>Your Premium will be:-</h4>
+          <br>  
+          <textarea name="txtarea" class="tarea pad lab" rows="13" cols="60">
+          </textarea>
+            
+        </fieldset>
+      </form>
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div id="footer">
+      <ul>
+        <li><a href="">Star</a></li>
+        <li><a href="">Business</a></li>
+        <li><a href="">Health</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Motor</a></li>
+        <li><a href="">Legal</a></li>
+        <li><a href="">Site Map</a></li>
+      </ul>        
+
+      <p class="cbv">
+      <a href="http://www.clearblueview.net/" target="_blank">Design by Clear Blue View</a>
+      </p>
+      <br>
+    </div>
+    
+  </body>
+</html>
